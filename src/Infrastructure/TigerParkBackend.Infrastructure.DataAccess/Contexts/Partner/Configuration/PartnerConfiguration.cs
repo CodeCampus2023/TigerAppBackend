@@ -36,7 +36,6 @@ public class PartnerConfiguration : IEntityTypeConfiguration<Partner>
         builder.HasOne(x => x.PayoutRequest)
             .WithOne(x => x.Partner)
             .HasForeignKey<Partner>(x => x.PayoutRequestId)
-            .HasForeignKey<Domain.PayoutRequest.PayoutRequest>(x => x.PartnerId)
             .OnDelete(DeleteBehavior.SetNull)
             .IsRequired(false);
     }

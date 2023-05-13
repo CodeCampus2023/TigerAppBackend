@@ -21,7 +21,7 @@ public static class ExtensionMethods
     /// </summary>
     private static IServiceCollection ConfigureDbConnections(this IServiceCollection services, IConfiguration configuration)
     {
-        var connectionString = configuration.GetConnectionString("PostgresAdBoardDb");
+        var connectionString = configuration.GetConnectionString("PostgresDb");
         if (connectionString is null) throw new ArgumentNullException(nameof(connectionString));
         services.AddDbContext<MigratorDbContext>(options => options.UseNpgsql(connectionString));
         return services;

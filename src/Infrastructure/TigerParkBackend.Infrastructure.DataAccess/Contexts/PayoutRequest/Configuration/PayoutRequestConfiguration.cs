@@ -17,7 +17,6 @@ public class PayoutRequestConfiguration : IEntityTypeConfiguration<PayoutRequest
         
         builder.HasOne(x => x.Partner)
             .WithOne(x => x.PayoutRequest)
-            .HasForeignKey<Domain.Partner.Partner>(x => x.PayoutRequestId)
             .HasForeignKey<PayoutRequest>(x => x.PartnerId)
             .OnDelete(DeleteBehavior.Cascade)
             .IsRequired(false);
