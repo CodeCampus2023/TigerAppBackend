@@ -49,4 +49,14 @@ public class CompletedOrder
     /// Идентификатор партнера
     /// </summary>
     public Guid? PartnerId { get; set; }
+    
+    /// <summary>
+    /// Дата создания
+    /// </summary>
+    public DateTime CreatedAt { get; set; }
+    
+    /// <summary>
+    /// Дата завершения
+    /// </summary>
+    public DateTime FinishedAt { get; set; }
 }

@@ -18,6 +18,9 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
         builder.Property(x => x.Track).HasMaxLength(1024).IsRequired();
         builder.Property(x => x.PorterCount).IsRequired();
         builder.Property(x => x.Comment).HasMaxLength(2048);
+        builder.Property(x => x.CreatedAt)
+            .HasConversion(d => d, d => DateTime.SpecifyKind(d, DateTimeKind.Utc))
+            .IsRequired();
 
         builder.HasOne(x => x.Vehicle)
             .WithOne()

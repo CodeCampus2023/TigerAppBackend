@@ -24,4 +24,9 @@ public class BonusTransaction
     /// Идентификатор партнера
     /// </summary>
     public Guid? PartnerId { get; set; }
+    
+    /// <summary>
+    /// Дата создания
+    /// </summary>
+    public DateTime CreatedAt { get; set; }
 }

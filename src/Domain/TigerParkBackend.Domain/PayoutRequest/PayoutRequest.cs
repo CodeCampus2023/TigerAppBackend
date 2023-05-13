@@ -16,6 +16,11 @@ public class PayoutRequest
     public decimal PayoutAmount { get; set; }
     
     /// <summary>
+    /// Дата создания
+    /// </summary>
+    public DateTime CreatedAt { get; set; }
+    
+    /// <summary>
     /// Партнер запросивший вывод
     /// </summary>
     public virtual Partner.Partner? Partner { get; set; }

@@ -16,6 +16,12 @@ public class CompletedOrderConfiguration : IEntityTypeConfiguration<CompletedOrd
         builder.Property(x => x.Destination).HasMaxLength(512).IsRequired();
         builder.Property(x => x.Cost).IsRequired();
         builder.Property(x => x.Percent).IsRequired();
+        builder.Property(x => x.CreatedAt)
+            .HasConversion(d => d, d => DateTime.SpecifyKind(d, DateTimeKind.Utc))
+            .IsRequired();
+        builder.Property(x => x.FinishedAt)
+            .HasConversion(d => d, d => DateTime.SpecifyKind(d, DateTimeKind.Utc))
+            .IsRequired();
         
         builder.HasOne(x => x.Partner)
             .WithMany(x => x.CompletedOrders)

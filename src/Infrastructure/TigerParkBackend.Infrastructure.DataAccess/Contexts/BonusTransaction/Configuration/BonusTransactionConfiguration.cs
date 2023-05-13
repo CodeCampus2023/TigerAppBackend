@@ -11,6 +11,9 @@ public class BonusTransactionConfiguration : IEntityTypeConfiguration<BonusTrans
     {
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Bonus).IsRequired();
+        builder.Property(x => x.CreatedAt)
+            .HasConversion(d => d, d => DateTime.SpecifyKind(d, DateTimeKind.Utc))
+            .IsRequired();
         
         builder.HasOne(x => x.Partner)
             .WithMany(x => x.BonusTransactions)

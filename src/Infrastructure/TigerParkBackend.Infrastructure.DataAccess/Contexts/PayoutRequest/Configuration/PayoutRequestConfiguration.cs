@@ -11,6 +11,9 @@ public class PayoutRequestConfiguration : IEntityTypeConfiguration<PayoutRequest
     {
         builder.HasKey(x => x.Id);
         builder.Property(x => x.PayoutAmount).IsRequired();
+        builder.Property(x => x.CreatedAt)
+            .HasConversion(d => d, d => DateTime.SpecifyKind(d, DateTimeKind.Utc))
+            .IsRequired();
         
         builder.HasOne(x => x.Partner)
             .WithOne(x => x.PayoutRequest)

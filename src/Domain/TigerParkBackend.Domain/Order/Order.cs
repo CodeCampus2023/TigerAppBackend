@@ -46,6 +46,11 @@ public class Order
     public int PorterCount { get; set; }
     
     /// <summary>
+    /// Дата создания
+    /// </summary>
+    public DateTime CreatedAt { get; set; }
+    
+    /// <summary>
     /// Комментарий к заказу
     /// </summary>
     public string? Comment { get; set; }
