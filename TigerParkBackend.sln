@@ -2,6 +2,16 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TigerParkBackend.Host.Api", "src\Host\TigerParkBackend.Host.Api\TigerParkBackend.Host.Api.csproj", "{F33A8A7D-3D59-4E8B-B578-CD3AB91A6366}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TigerParkBackend.Application.AppData", "src\Application\TigerParkBackend.Application.AppData\TigerParkBackend.Application.AppData.csproj", "{DC6CB4E9-3287-4B2A-BA2F-670076F86C18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TigerParkBackend.Domain", "src\Domain\TigerParkBackend.Domain\TigerParkBackend.Domain.csproj", "{CA8FD08B-DFC8-419F-900A-929414C355BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TigerParkBackend.Contracts", "src\Contracts\TigerParkBackend.Contracts\TigerParkBackend.Contracts.csproj", "{6A7A7C10-052D-472D-8303-83508AA246BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TigerParkBackend.Infrastructure", "src\Infrastructure\TigerParkBackend.Infrastructure\TigerParkBackend.Infrastructure.csproj", "{2FBE5FED-BED7-401B-A04F-461F7EC0D445}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TigerParkBackend.Infrastructure.DataAccess", "src\Infrastructure\TigerParkBackend.Infrastructure.DataAccess\TigerParkBackend.Infrastructure.DataAccess.csproj", "{07AC87D4-8966-491D-823D-EBF888E29A02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +22,25 @@ Global
 		{F33A8A7D-3D59-4E8B-B578-CD3AB91A6366}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F33A8A7D-3D59-4E8B-B578-CD3AB91A6366}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F33A8A7D-3D59-4E8B-B578-CD3AB91A6366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC6CB4E9-3287-4B2A-BA2F-670076F86C18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC6CB4E9-3287-4B2A-BA2F-670076F86C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC6CB4E9-3287-4B2A-BA2F-670076F86C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC6CB4E9-3287-4B2A-BA2F-670076F86C18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA8FD08B-DFC8-419F-900A-929414C355BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8FD08B-DFC8-419F-900A-929414C355BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8FD08B-DFC8-419F-900A-929414C355BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8FD08B-DFC8-419F-900A-929414C355BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A7A7C10-052D-472D-8303-83508AA246BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A7A7C10-052D-472D-8303-83508AA246BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A7A7C10-052D-472D-8303-83508AA246BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A7A7C10-052D-472D-8303-83508AA246BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FBE5FED-BED7-401B-A04F-461F7EC0D445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FBE5FED-BED7-401B-A04F-461F7EC0D445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FBE5FED-BED7-401B-A04F-461F7EC0D445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FBE5FED-BED7-401B-A04F-461F7EC0D445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07AC87D4-8966-491D-823D-EBF888E29A02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07AC87D4-8966-491D-823D-EBF888E29A02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07AC87D4-8966-491D-823D-EBF888E29A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07AC87D4-8966-491D-823D-EBF888E29A02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
