@@ -15,6 +15,8 @@ public class PartnerConfiguration : IEntityTypeConfiguration<Partner>
         builder.Property(x => x.Password).HasMaxLength(40).IsRequired();
         builder.Property(x => x.Bonuses).IsRequired();
 
+        builder.HasIndex(x => x.Phone).IsUnique();
+
         builder.HasMany(x => x.Orders)
             .WithOne(x => x.Partner)
             .HasForeignKey(x => x.PartnerId)

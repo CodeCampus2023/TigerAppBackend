@@ -14,7 +14,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Application\TigerParkBackend.Application.AppData\TigerParkBackend.Application.AppData.csproj" />
       <ProjectReference Include="..\..\Domain\TigerParkBackend.Domain\TigerParkBackend.Domain.csproj" />
+      <ProjectReference Include="..\TigerParkBackend.Infrastructure\TigerParkBackend.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>
