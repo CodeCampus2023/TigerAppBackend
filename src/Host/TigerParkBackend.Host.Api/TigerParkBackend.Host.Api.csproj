@@ -8,12 +8,16 @@
 
     <ItemGroup>
         <PackageReference Include="AutoMapper" Version="12.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.5" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Application\TigerParkBackend.Application.AppData\TigerParkBackend.Application.AppData.csproj" />
+      <ProjectReference Include="..\..\Contracts\TigerParkBackend.Contracts\TigerParkBackend.Contracts.csproj" />
       <ProjectReference Include="..\..\Infrastructure\TigerParkBackend.Infrastructure.DataAccess\TigerParkBackend.Infrastructure.DataAccess.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\TigerParkBackend.Infrastructure\TigerParkBackend.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

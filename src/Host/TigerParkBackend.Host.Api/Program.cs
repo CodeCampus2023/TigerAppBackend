@@ -1,9 +1,16 @@
 using AutoMapper;
+using TigerParkBackend.Host.Api;
+using TigerParkBackend.Infrastructure.MapProfiles;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddSingleton<IMapper>(new Mapper(GetMapperConfiguration()));
+
+builder.Services.AddRepositories();
+builder.Services.AddServices();
+builder.Services.AddDbContextWithConfigurations();
+builder.Services.AddJwtAuthenticationWithOptions(builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -31,11 +38,7 @@ static MapperConfiguration GetMapperConfiguration()
 {
     var config = new MapperConfiguration(cfg =>
     {
-        // cfg.AddProfile<AdvertProfile>();
-        // cfg.AddProfile<CategoryProfile>();
-        // cfg.AddProfile<UserProfile>();
-        // cfg.AddProfile<ImageProfile>();
-        // cfg.AddProfile<CommentProfile>();
+        cfg.AddProfile<PartnerProfile>();
     });
     config.AssertConfigurationIsValid();
     return config;

@@ -15,6 +15,8 @@ public class PartnerConfiguration : IEntityTypeConfiguration<Partner>
         builder.Property(x => x.Password).HasMaxLength(40).IsRequired();
         builder.Property(x => x.Bonuses).IsRequired();
 
+        builder.HasIndex(x => x.Phone).IsUnique();
+
         builder.HasMany(x => x.Orders)
             .WithOne(x => x.Partner)
             .HasForeignKey(x => x.PartnerId)
@@ -36,7 +38,6 @@ public class PartnerConfiguration : IEntityTypeConfiguration<Partner>
         builder.HasOne(x => x.PayoutRequest)
             .WithOne(x => x.Partner)
             .HasForeignKey<Partner>(x => x.PayoutRequestId)
-            .HasForeignKey<Domain.PayoutRequest.PayoutRequest>(x => x.PartnerId)
             .OnDelete(DeleteBehavior.SetNull)
             .IsRequired(false);
     }

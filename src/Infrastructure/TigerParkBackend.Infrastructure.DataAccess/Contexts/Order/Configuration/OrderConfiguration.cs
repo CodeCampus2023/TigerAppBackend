@@ -16,6 +16,7 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
         builder.Property(x => x.Pickup).HasMaxLength(512).IsRequired();
         builder.Property(x => x.Destination).HasMaxLength(512).IsRequired();
         builder.Property(x => x.Track).HasMaxLength(1024).IsRequired();
+        builder.Property(x => x.OrderCrmId).IsRequired();
         builder.Property(x => x.PorterCount).IsRequired();
         builder.Property(x => x.Comment).HasMaxLength(2048);
         builder.Property(x => x.CreatedAt)

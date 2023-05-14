@@ -1,0 +1,43 @@
+version: '3.7'
+
+services:
+
+  api:
+    container_name: adboard-api
+    build:
+      context: .
+      dockerfile: src/Host/TigerParkBackend.Host.Api/Dockerfile
+    ports:
+      - "5000:80"
+    environment:
+      - ConnectionStrings__PostgresDb=Server=postgres;Database=tigerparkpartner;Username=postgres;Password=password;Port=5432
+    depends_on:
+      - "postgres"
+
+  migrator:
+    container_name: adboard-migrator
+    build:
+      context: .
+      dockerfile: src/Host/TigerParkBackend.Host.Migrator/Dockerfile
+    environment:
+      - ConnectionStrings__PostgresBoardDb=Server=postgres;Database=tigerparkpartner;Username=postgres;Password=password;Port=5432
+    networks:
+      - adboard-network
+    depends_on:
+      - "postgres"
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pg-data:
+    
+networks:
+  adboard-network:
