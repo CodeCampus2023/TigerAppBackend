@@ -6,14 +6,14 @@ using TigerParkBackend.Contracts.Partner;
 namespace TigerParkBackend.Host.Api.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("Auth")]
 [Produces("application/json")]
 [ProducesResponseType(typeof(ErrorDto), StatusCodes.Status500InternalServerError)]
-public class PartnersController : ControllerBase
+public class AuthenticationController : ControllerBase
 {
     private readonly IAuthService _authService;
 
-    public PartnersController(IAuthService authService)
+    public AuthenticationController(IAuthService authService)
     {
         _authService = authService;
     }

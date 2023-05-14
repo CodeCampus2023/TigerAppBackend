@@ -56,6 +56,11 @@ public class Order
     public string? Comment { get; set; }
     
     /// <summary>
+    /// Идентификатор заказа в CRM
+    /// </summary>
+    public Guid OrderCrmId { get; set; }
+    
+    /// <summary>
     /// Партнер, создавший заказ
     /// </summary>
     public virtual Partner.Partner? Partner { get; set; }
